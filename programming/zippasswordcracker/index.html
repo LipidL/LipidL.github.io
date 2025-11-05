@@ -1,0 +1,463 @@
+<!doctype html>
+<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14 scheme-light dark:scheme-dark" lang="en">
+
+<head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="generator" content="Zola v0.21.0" />
+  <title>ZipPasswordCracker 高性能压缩包口令破解工具</title>
+  <meta property="og:title" content="ZipPasswordCracker 高性能压缩包口令破解工具" />
+  <meta property="og:url" content="https://lipidl.github.io/programming/zippasswordcracker/" />
+  <link rel="canonical" href="https://lipidl.github.io/programming/zippasswordcracker/" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2025-10-23T00:00:00+00:00" />
+  <!-- Begin Head inject -->
+  
+  <!-- End Head inject -->
+  <link rel="stylesheet" href="https://lipidl.github.io/main.min.css?h=a74dd0c65eed2d85f55f" />
+  <link rel="stylesheet" href="https://lipidl.github.io/icons.css?h=7dd5ab449fa840fc01e2" />
+  <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
+  <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
+  <link rel="icon" type="image/x-icon" href="https://lipidl.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" type="image/png" href="https://lipidl.github.io/apple-touch-icon.png?h=58bee300054c5308feb3" />
+  <link rel="icon" type="image/png" href="https://lipidl.github.io/android-icon.png?h=8d80ec95446bd2c36826" />
+  <script src="https://lipidl.github.io/js/zola-theme.min.js?h=26975b146d48e6ff41af"></script>
+  <!-- Begin Head End inject -->
+  
+  <!-- End Head End inject -->
+</head>
+
+<body class="text-black duration-100 ease-out dark:text-white">
+  <!-- Header -->
+<header class="header fixed top-0 z-40 mx-auto min-h-13 w-full">
+  <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center min-h-8 overflow-hidden">
+        <button type="button" title="Go to home page [Alt + !]" accesskey="!"
+          onclick="window.location.href='https://lipidl.github.io/';"
+          class="btn-home h-6 w-6 shrink-0 cursor-pointer text-[0px]
+            bg-center bg-no-repeat bg-cover [background-image:var(--icons-home,url(icons/home.svg))] dark:invert"
+        ></button>
+        <button type="button" title="Switch color scheme [Alt + $]" accesskey="$"
+          onclick="window.zolaTheme.color.toggle();"
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
+            bg-center bg-no-repeat bg-cover [background-image:var(--icons-btn-dark,url(icons/btn-dark.svg))]
+            dark:[background-image:var(--icons-btn-light,url(icons/btn-light.svg))] dark:invert"
+        ></button>
+      </div>
+      <div title="Toggle menu [Alt + `+`]" role="button" accesskey="+" tabindex="0"
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer select-none flex-col items-center justify-center gap-2.5 lg:hidden"
+        onclick="window.zolaTheme.menu.toggleHeader();"
+        onkeydown="(event.keyCode == 13 || event.keyCode == 32) ? event.preventDefault() || window.zolaTheme.menu.toggleHeader() : true;"
+      ></div>
+    </div>
+    <nav class="flex w-full items-center lg:w-auto">
+      <menu
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0">
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://lipidl.github.io/programming/"
+          >Programming</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://lipidl.github.io/categories/"
+          >Categories</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://lipidl.github.io/tags/"
+          >Tags</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://lipidl.github.io/about/"
+          >About</a>
+        </li>
+      </menu>
+      <!-- Begin Header Nav inject -->
+      
+      <!-- End Header Nav inject -->
+    </nav>
+  </div>
+</header>
+
+  <!-- Begin Body Start inject -->
+  
+  <!-- End Body Start inject -->
+  <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
+    relative mx-auto min-h-[calc(100vh-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 wrap-break-word">
+      <!-- Search -->
+<div id="linkita-search-wrapper" class="hidden">
+  <ul id="linkita-search-results"></ul>
+</div>
+<script>window.zolaTheme.search.init({ scripts: ["https://lipidl.github.io/elasticlunr.min.js", "https://lipidl.github.io/search_index.en.js"], arg: { w: "#linkita-search-wrapper", r: "#linkita-search-results" } });</script>
+
+    
+<article>
+  <!-- Begin Page Start inject -->
+  
+  <!-- End Page Start inject -->
+
+  <header class="mb-16">
+    <h1 class="my-0! pb-2.5">ZipPasswordCracker 高性能压缩包口令破解工具</h1>
+    <!-- Page Info -->
+<div class="text-sm antialiased opacity-80"><time
+      datetime="2025-10-23T00:00:00+00:00">2025-10-23</time><span
+        class="middot"></span><time
+    datetime="PT0H24M0S">24&nbsp;min</time><span
+      class="middot"></span><span>Lipid</span>
+</div>
+
+  </header>
+  <!-- TOC -->
+<nav class="block-bg prose-a:secondary-link mb-12 rounded-lg p-2 text-lg">
+  <details>
+    <summary class="select-none py-0.5 lg:py-1 pl-3.5" title="[Alt + =]" accesskey="=">
+      <span class="cursor-pointer ml-0.5">Table of Contents</span>
+    </summary>
+    <ul class="ps-8">
+      <li class="ps-0.5">
+        <a class="no-underline hover:underline" href="https://lipidl.github.io/programming/zippasswordcracker/#ji-ben-yuan-li">基本原理</a>
+      </li>
+      <li class="ps-0.5">
+        <a class="no-underline hover:underline" href="https://lipidl.github.io/programming/zippasswordcracker/#zipwen-jian-du-qu">zip文件读取</a>
+      </li>
+      <li class="ps-0.5">
+        <a class="no-underline hover:underline" href="https://lipidl.github.io/programming/zippasswordcracker/#kou-ling-yan-zheng">口令验证</a>
+      </li>
+      <li class="ps-0.5">
+        <a class="no-underline hover:underline" href="https://lipidl.github.io/programming/zippasswordcracker/#duo-xian-cheng-shi-xian">多线程实现</a>
+        <ul>
+          <li class="ps-0.5">
+            <a class="no-underline hover:underline" href="https://lipidl.github.io/programming/zippasswordcracker/#jin-du-tiao-de-shi-xian">进度条的实现</a>
+          </li>
+        </ul>
+      </li>
+      <li class="ps-0.5">
+        <a class="no-underline hover:underline" href="https://lipidl.github.io/programming/zippasswordcracker/#gpushi-xian">GPU实现</a>
+      </li>
+      <li class="ps-0.5">
+        <a class="no-underline hover:underline" href="https://lipidl.github.io/programming/zippasswordcracker/#cpuyan-zheng">CPU验证</a>
+      </li>
+      <li class="ps-0.5">
+        <a class="no-underline hover:underline" href="https://lipidl.github.io/programming/zippasswordcracker/#pei-zhi-wen-jian">配置文件</a>
+      </li>
+      <li class="ps-0.5">
+        <a class="no-underline hover:underline" href="https://lipidl.github.io/programming/zippasswordcracker/#jie-yu">结语</a>
+      </li>
+    </ul>
+  </details>
+</nav>
+
+  <!-- Content -->
+  <section><p>我们经常会遇到忘记口令的压缩包。也许是哪次下载资源后忘记及时解压，也许是资源上传者本身就没有提供解压口令。
+总之，这样的压缩包总会让人难以处理：直接删除未免有些浪费，但又没有什么破解的办法。
+因此，我开发了一个口令破解工具<a href="https://github.com/LipidL/ZipPasswordCracker">ZipPasswordCracker</a>，能够高效地破解压缩包口令。</p>
+<h2 id="ji-ben-yuan-li">基本原理</h2>
+<p>该工具的基本原理非常简单：将所有可能的字符组合尝试一遍，就能找到最终合法的口令了。
+然而，所有可能的字符组合实际上非常多。以纯数字组成的至多6位的口令为例，所有可能的字符组合数目为：
+$10 + 10^2 + 10^3 + ... + 10^6$.
+更一般地，可能的字符数量为$a$, 长度不高于$n$的所有可能组合为
+$ \sum_{(i=1)}^{(i=n)} a^i = (a^{(n+1)}-a)/(a-1) $
+因此，我们需要一种效率足够高的手段来对所有可能的内容进行遍历。
+注意到每次口令的尝试理论上是独立的，且口令尝试的顺序并不重要<sup class="footnote-reference"><a href="#password_order">1</a></sup>。
+因此，我们可以使用并行化的方法来成倍地加快遍历过程。
+在计算机上，程序的并行化手段包括多线程、多进程、GPU等手段。
+其中，多线程程序编写快速，多进程程序能够在超算等多计算节点场景下使用，但需要解决进程间信息传递的问题。
+GPU并行化受益于如今快速发展的GPU技术，计算速度最快，但涉及异构计算<sup class="footnote-reference"><a href="#heterogeneous_computation">2</a></sup>。
+在<code>ZipPasswordCracker</code>中，我们提供了两种并行化实现：多线程并行和GPU并行。
+其中，多线程并行直接使用<code>pthread</code>库，因此能够直接在绝大多数计算机上编译和运行。
+而GPU并行则使用<code>CUDA</code>编程，因此需要借助NVIDIA显卡以及<code>CUDA</code>运行时才能运行。</p>
+<p>接下来，我将简要叙述<code>ZipPasswordCracker</code>的开发和优化过程。</p>
+<h2 id="zipwen-jian-du-qu">zip文件读取</h2>
+<p>实现<code>ZipPasswordCracker</code>的第一步就是实现zip文件的读取。
+给定一个zip文件，程序需要判断其是否加密、加密类型。
+若再给定一个字符串作为口令，程序还需要判断该口令是否正确。</p>
+<p>查询<a href="https://en.wikipedia.org/wiki/ZIP_(file_format)">Wikipedia</a>,我们可以找到zip文件的文件头。</p>
+<table><thead><tr><th style="text-align: center">偏移量</th><th style="text-align: center">长度</th><th style="text-align: center">内容</th></tr></thead><tbody>
+<tr><td style="text-align: center">0</td><td style="text-align: center">4</td><td style="text-align: center">文件签名，0x04034b50</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">2</td><td style="text-align: center">解压所需的最低zip版本</td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">2</td><td style="text-align: center">通用数据区</td></tr>
+<tr><td style="text-align: center">8</td><td style="text-align: center">2</td><td style="text-align: center">压缩算法</td></tr>
+<tr><td style="text-align: center">10</td><td style="text-align: center">2</td><td style="text-align: center">最后修改时间</td></tr>
+<tr><td style="text-align: center">12</td><td style="text-align: center">2</td><td style="text-align: center">最后修改日期</td></tr>
+<tr><td style="text-align: center">14</td><td style="text-align: center">4</td><td style="text-align: center">未压缩数据的CRC</td></tr>
+<tr><td style="text-align: center">18</td><td style="text-align: center">4</td><td style="text-align: center">压缩后大小 (zip64下为0xffffffff)</td></tr>
+<tr><td style="text-align: center">22</td><td style="text-align: center">4</td><td style="text-align: center">压缩前大小 (zip64下为0xffffffff)</td></tr>
+<tr><td style="text-align: center">26</td><td style="text-align: center">2</td><td style="text-align: center">文件名长度 (n)</td></tr>
+<tr><td style="text-align: center">28</td><td style="text-align: center">2</td><td style="text-align: center">额外数据区长度 (m)</td></tr>
+<tr><td style="text-align: center">30</td><td style="text-align: center">n</td><td style="text-align: center">文件名</td></tr>
+<tr><td style="text-align: center">30+n</td><td style="text-align: center">m</td><td style="text-align: center">额外数据区</td></tr>
+</tbody></table>
+<p>根据这个文件头的定义，我们就能够构造如下数据结构</p>
+<pre data-lang="C" style="background-color:#2b303b;color:#c0c5ce;" class="language-C "><code class="language-C" data-lang="C"><span style="color:#b48ead;">struct </span><span>local_file_header{
+</span><span>    uint32_t signature;
+</span><span>    uint16_t version_needed_to_extract;
+</span><span>    uint16_t general_purpose_bit_flag;
+</span><span>    uint16_t compression_method;
+</span><span>    uint16_t last_mod_file_time;
+</span><span>    uint16_t last_mod_file_date;
+</span><span>    uint32_t crc32;
+</span><span>    uint32_t compressed_size;
+</span><span>    uint32_t uncompressed_size;
+</span><span>    uint16_t file_name_length;
+</span><span>    uint16_t extra_field_length;
+</span><span>}</span><span style="color:#b48ead;">__attribute__</span><span>((packed));
+</span></code></pre>
+<p>只要将待处理的zip文件映射到内存中，并将一个<code>struct local_file_header*</code>结构体的指针指向文件的开头，就能自动在该结构体的成员中读取出对应的内容。
+以下是一段例子</p>
+<pre data-lang="C" style="background-color:#2b303b;color:#c0c5ce;" class="language-C "><code class="language-C" data-lang="C"><span style="color:#65737e;">// open the file
+</span><span style="color:#b48ead;">int</span><span> fd = </span><span style="color:#bf616a;">open</span><span>(argv[</span><span style="color:#d08770;">1</span><span>], O_RDONLY);
+</span><span style="color:#b48ead;">if </span><span>(fd == -</span><span style="color:#d08770;">1</span><span>) {
+</span><span>    </span><span style="color:#96b5b4;">perror</span><span>(&quot;</span><span style="color:#a3be8c;">open</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span>;
+</span><span>}
+</span><span style="color:#65737e;">// get file size
+</span><span style="color:#b48ead;">struct</span><span> stat st;
+</span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">fstat</span><span>(fd, &amp;st) == -</span><span style="color:#d08770;">1</span><span>) {
+</span><span>    </span><span style="color:#96b5b4;">perror</span><span>(&quot;</span><span style="color:#a3be8c;">fstat</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span>;
+</span><span>}
+</span><span>off_t size = st.</span><span style="color:#bf616a;">st_size</span><span>;
+</span><span style="color:#65737e;">// map the file to memory
+</span><span style="color:#b48ead;">void </span><span>*file = </span><span style="color:#bf616a;">mmap</span><span>(</span><span style="color:#d08770;">NULL</span><span>, size, PROT_READ, MAP_PRIVATE, fd, </span><span style="color:#d08770;">0</span><span>);
+</span><span>header = (</span><span style="color:#b48ead;">struct</span><span> local_file_header *)file;
+</span></code></pre>
+<p>读取了zip相关的信息后，我们还需要读取与加密相关的内容。
+从<code>7-zip</code>创建zip文件的界面中，我们发现了一种常见的加密方式：AES-256.
+通过查阅<a href="https://www.winzip.com/en/support/aes-encryption/">相关文档</a>，我们找到了AES加密后zip文件的特征：</p>
+<ul>
+<li>通用数据区最低位为1</li>
+<li>压缩算法为99(16进制下为0x63)</li>
+</ul>
+<p>我们还找到了加密相关数据块的定义。</p>
+<table><thead><tr><th style="text-align: center">偏移量</th><th style="text-align: center">长度</th><th style="text-align: center">内容</th></tr></thead><tbody>
+<tr><td style="text-align: center">0</td><td style="text-align: center">2</td><td style="text-align: center">文件头，0x9901</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">2</td><td style="text-align: center">数据大小</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">2</td><td style="text-align: center">加密方法版本号</td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">2</td><td style="text-align: center">加密方法ID, ASCII字符'AE'</td></tr>
+<tr><td style="text-align: center">8</td><td style="text-align: center">1</td><td style="text-align: center">密钥长度, 0x01对应128bit, 0x02对应192bit, 0x03对应256bit</td></tr>
+</tbody></table>
+<p>该数据块位于文件头的额外数据区。通过这些内容，我们就能够确定文件是否为AES加密的文件了。</p>
+<p>验证口令是否正确的数据存放在每个文件的文件头内<sup class="footnote-reference"><a href="#seperated_password">3</a></sup>
+但简单起见，我们直接检验口令对第一个文件是否正确。
+这些数据块的定义为</p>
+<table><thead><tr><th style="text-align: center">长度</th><th style="text-align: center">内容</th></tr></thead><tbody>
+<tr><td style="text-align: center">可变</td><td style="text-align: center">盐</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">口令验证码</td></tr>
+<tr><td style="text-align: center">可变</td><td style="text-align: center">文件数据</td></tr>
+<tr><td style="text-align: center">10</td><td style="text-align: center">授权码</td></tr>
+</tbody></table>
+<p>然而，该文档中并未提到如何验证口令是否正确。</p>
+<h2 id="kou-ling-yan-zheng">口令验证</h2>
+<p>虽然文档中并未提及如何验证口令，但解压zip文件的开源代码却有很多。
+通过学习<a href="https://github.com/zip-rs/zip2/">rust的zip库</a>，
+我们能够学习到一种快速判断口令正确性的算法：
+使用PBKDF2-HMAC-SHA1算法将口令和盐迭代1000次，得到长度为<code>salt_length</code> *4+2的衍生口令。
+随后，比较衍生口令的最后两位与口令验证码，若不同则口令错误。</p>
+<p>需要注意的是，如此比较显然不能成为口令正确的充分条件。
+假设衍生口令的各字节内容均随机，则衍生口令与口令验证码重合的概率为$1/(2^8)^2 = 1/65536$.
+相比广阔的口令空间，这个概率显然算不上小。
+事实上，如果设定口令范围为数字组成的字符串，且口令最长5个字符，则通常能够找到2-3个符合的口令。
+用这种方法将可能的口令空间缩减到$1/65536$, 之后再使用更精细的算法逐一验证似乎是一个不错的想法。</p>
+<p>因此，我们首先实现这个口令验证算法。
+在<a href="https://github.com/zip-rs/zip2/">zip库</a>中，作者直接使用了内置的PBKDF2-HMAC-SHA1函数。
+但在C语言中，类似的轮子并不存在。
+因此，我们依次实现了<code>SHA1</code>、<code>HMAC-SHA1</code>和<code>PBKDF2-HMAC-SHA1</code>函数，随后完成了口令验证函数<code>is_valid_key()</code>
+经过验证，我们的口令验证函数能够正确识别口令。
+加之一个简单的口令遍历算法，我们就得到了一个单线程版本的密码破解程序。
+当然，这个版本的密码破解程序运行速度十分缓慢。
+在Inter 12400F CPU上(启用超线程)，WSL Ubuntu操作系统中，为了破解一个长度不超过4位，完全由数字构成的口令，该程序需要运行55秒。
+但它能够找到正确的口令——这是一个不错的开始。
+无数开发经验告诉我们，要首先编写正确的代码，然后再编写高效的代码。
+既然我们已经实现了正确性，在此基础上，我们就能够开始通过多线程和GPU来提高程序的效率了。</p>
+<h2 id="duo-xian-cheng-shi-xian">多线程实现</h2>
+<p>由于现代CPU的核心数量有了大幅的增长，使用多线程程序能够更高效地利用CPU资源。
+在这个程序中，多线程的实现十分简单。
+这是因为线程之间仅需要共享合法字符表以及盐、口令验证码。
+而且各线程均不需要写入这些内容。
+因此，在这个程序中，并不存在程序之间潜在的数据竞争，因而无需使用锁、信号量等复杂的机制。
+我们从主线程出发，将各线程所需的信息(或指向信息的指针)封装在一个结构体中，
+并使用<code>pthread</code>库创建线程。
+主线程负责创建线程和等待线程完成；
+使用<code>pthread</code>库创建的线程则进行口令的验证工作。
+所有可能的口令均被分配了一个唯一的编号。
+我们也编写了将编号转换成口令的函数<code>num_to_pwd(int64_t* test_pwd_num[MAX_PWD_LENGTH], char *test_pwd, char *legal_chars)</code>。
+其中，<code>legal_chars</code>是存储所有合法口令字符的数组。
+这样，每个线程就可以方便地计算自己需要处理的口令了。
+在创建线程时，每个线程将被分配一个唯一的线程号。
+遍历口令时，每个线程依据自己的线程号和口令空间的大小计算出自己需要处理的口令编号，然后调用<code>num_to_pwd</code>获得当前需要处理的口令字符串。
+最后，调用<code>is_valid_pwd</code>进行验证即可。
+程序使用放置在堆区的链表存储所有合法的口令。链表的头尾由锁保护，作为全局变量供所有线程访问。
+若线程发现了一个合法的口令，则先尝试获得锁，随后将新节点插入链表头。
+这样，我们就能借助多线程轻松地提高程序地性能了。
+在Inter 12400F CPU上(启用超线程)，WSL Ubuntu操作系统中，为了破解一个长度不超过4位，完全由数字构成的口令，
+使用10线程，该程序仅需10秒就能完成遍历——速度提升到了原来的5倍！<sup class="footnote-reference"><a href="#multithreads_efficiency">4</a></sup></p>
+<h3 id="jin-du-tiao-de-shi-xian">进度条的实现</h3>
+<p>目前的实现中，用户只能等待程序结束，偶尔可以看到找到可能口令时的输出。
+但此时，用户无法判断程序的进度。
+为了让用户知道当前的进度，我决定为我的程序添加一个进度条。
+在获知所有合法字符和口令的最长长度后，需要尝试的口令数量就固定了。
+因此，现在唯一的问题就是如何获得所有线程的进度。
+为此，我又设置了一个监视线程，用来监视所有验证线程的进度。
+在每个验证线程中，我增加了一个在指向堆区的<code>uint64_t</code>变量的指针，用来表实该线程的进度。
+在初始化线程时，该变量被初始化到0.
+对监视线程，它将获得所有验证线程的进度变量的指针。
+这样，监视线程只需要访问每个验证线程的进度变量，将它们相加，即可获得程序的总进度。
+需要注意，每个进度变量都有两个线程对它访问：它所属的验证线程将对它进行读写操作（每次验证口令后均对其加一）；监视线程将对它进行读操作。
+因此，正确的做法是对每个进度变量加锁，线程每次尝试访问该变量时都要先获得锁。
+然而，这样做带来了严重的性能损耗。监视线程持续尝试对进度变量加锁，阻碍了验证线程的正常运行。
+考虑到监视线程的目的是提升用户体验，如果为此大幅牺牲运算效率，那是不可接受的。
+我们注意到，监视线程提供的进度是用于用户判断程序的大致运行时间的。
+因此，进度稍微不准确并不会导致用户体验的下降。
+又考虑到每个进度变量实际上只有一个验证线程对其写入，而监督线程仅仅是读操作，
+完全可以不对该线程加锁。
+通过稍微牺牲验证线程获得进度的时效性，我们通过无锁操作提升了程序的性能，同时保证了用户体验。</p>
+<h2 id="gpushi-xian">GPU实现</h2>
+<p>有了CPU上的正确实现, 在CUDA上实现<code>is_valid_pwd</code>就十分简单了。
+基本上，我们只需要在<code>validate_key_thread</code>函数前加上<code>__global__</code>，表示其运行在GPU上并可以由CPU代码调用，
+并将剩余相关运算函数前加上<code>__device__</code>，表示其运行在GPU上并只能由GPU代码调用。
+然而，如此修改的代码并不能通过编译。
+其原因是我们计算HMAC认证码时，由于数据（在我们的例子中是盐）的长度不能在编译时就确定<sup class="footnote-reference"><a href="#salt_length">5</a></sup>，
+计算过程中使用的内存的大小也不能在编译时确定。
+在CPU代码中，我们使用<code>malloc</code>函数在堆上分配内存，其大小在运行时才决定。
+然而，在GPU代码中，<code>malloc</code>函数并不存在，GPU代码通常也不具有可以由GPU代码动态分配的显存块<sup class="footnote-reference"><a href="#GPU_dynamic_memory">6</a></sup>。
+而且，若在CPU上分配显存，则分配出的显存将位于全局显存(global memory)。这样的区块访存速度慢，对性能影响大。</p>
+<p>虽然HMAC认证码的数据长度不能在编译期确定，但它仅有三种可选长度：8，12，16.
+因此，我们可以为每个可选长度都编写一条HMAC函数。
+这样，对应的数据就能直接通过数组声明的方式完成分配，同时也能够保证编译器能够最大幅度优化这些代码。
+然而，由于这些不同版本的HMAC函数除了声明的数组长度以外完全相同，如果简单将代码进行复制，则会大大增加无用代码的数量。
+同时，这也带来了维护性问题：若我们发现HMAC函数的实现有bug，或想到了更优的HMAC实现，我们必须在三个地方对HMAC函数进行修改。
+恰好，C++为这种需求提供了解决方案——模板。
+使用模板，我们可以仅编写一个HMAC函数，但指定一个“超参数”，编译器将自动为每个超参数生成一个独立的HMAC函数。
+在汇编层面，我们构造了三个不同的HMAC函数以适应不同的盐长度，但在代码层面，HMAC认证码的逻辑仅被实现了一次。
+这同时保证了性能和可维护性。
+更改后的代码大致如下：</p>
+<pre data-lang="C" style="background-color:#2b303b;color:#c0c5ce;" class="language-C "><code class="language-C" data-lang="C"><span>template &lt;</span><span style="color:#b48ead;">int</span><span> DATA_LENGTH&gt; __device__ </span><span style="color:#b48ead;">void </span><span style="color:#bf616a;">HMAC_SHA1</span><span>(
+</span><span>    </span><span style="color:#b48ead;">unsigned char </span><span>*key, uint64_t key_length,
+</span><span>    </span><span style="color:#b48ead;">unsigned char </span><span>*data,
+</span><span>    </span><span style="color:#b48ead;">unsigned char</span><span> hash[</span><span style="color:#d08770;">20</span><span>]) 
+</span><span>{
+</span><span>    </span><span style="color:#65737e;">// HMAC logic
+</span><span>    </span><span style="color:#b48ead;">unsigned char</span><span> first_part[BLOCK_SIZE + DATA_LENGTH]; </span><span style="color:#65737e;">// allocate memory by declaring an array
+</span><span>    </span><span style="color:#65737e;">// rest of HMAC logic
+</span><span>}
+</span><span>
+</span><span style="color:#65737e;">// when calling this function
+</span><span>__device__ </span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">PBKDF2_HMAC_SHA1</span><span>(</span><span style="color:#b48ead;">unsigned char </span><span>*</span><span style="color:#bf616a;">password</span><span>, uint64_t </span><span style="color:#bf616a;">password_length</span><span>,
+</span><span>                      </span><span style="color:#b48ead;">unsigned char </span><span>*</span><span style="color:#bf616a;">salt</span><span>, uint64_t </span><span style="color:#bf616a;">salt_length</span><span>,
+</span><span>                      uint64_t </span><span style="color:#bf616a;">iteration_count</span><span>, uint64_t </span><span style="color:#bf616a;">derived_key_length</span><span>,
+</span><span>                      u8 *</span><span style="color:#bf616a;">long_salt</span><span>,
+</span><span>                      </span><span style="color:#b48ead;">unsigned char </span><span>*</span><span style="color:#bf616a;">derived_key</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#65737e;">// PBKDF2 logic
+</span><span>    </span><span style="color:#b48ead;">switch </span><span>(salt_length) {
+</span><span>        </span><span style="color:#b48ead;">case </span><span style="color:#d08770;">8</span><span>:
+</span><span>            HMAC_SHA1&lt;</span><span style="color:#d08770;">8 </span><span>+ </span><span style="color:#d08770;">4</span><span>&gt;(password, password_length, long_salt, previous_hash);
+</span><span>            </span><span style="color:#b48ead;">break</span><span>;
+</span><span>        </span><span style="color:#b48ead;">case </span><span style="color:#d08770;">12</span><span>:
+</span><span>            HMAC_SHA1&lt;</span><span style="color:#d08770;">12 </span><span>+ </span><span style="color:#d08770;">4</span><span>&gt;(password, password_length, long_salt, previous_hash);
+</span><span>            </span><span style="color:#b48ead;">break</span><span>;
+</span><span>        </span><span style="color:#b48ead;">case </span><span style="color:#d08770;">16</span><span>:
+</span><span>            HMAC_SHA1&lt;</span><span style="color:#d08770;">16 </span><span>+ </span><span style="color:#d08770;">4</span><span>&gt;(password, password_length, long_salt, previous_hash);
+</span><span>            </span><span style="color:#b48ead;">break</span><span>;
+</span><span>        </span><span style="color:#b48ead;">default</span><span>:
+</span><span>            </span><span style="color:#96b5b4;">assert</span><span>(</span><span style="color:#d08770;">0</span><span>); </span><span style="color:#65737e;">// should never happen
+</span><span>    }
+</span><span>    </span><span style="color:#65737e;">// rest of PBKDF2 logic
+</span><span>}
+</span></code></pre>
+<p>至于GPU上的线程分配，我们采取和CPU上基本一致的策略：每个线程负责多个口令，单个口令的验证由单个线程独立完成。
+实际上，CUDA提供了更为细致的线程布局控制，将线程组合为warp，再将warp组合为grid，最后将grid组合为block，作为CPU代码调用的基本单位。
+然而，由于口令试错完全不涉及任何线程间同步问题，我们直接将为每个grid中填充256个线程，每个block中填充和GPU流处理器数量相同的grid。
+最终，我们便实现了高性能的zip口令试错程序的GPU版本。</p>
+<h2 id="cpuyan-zheng">CPU验证</h2>
+<p>之前提到，这种验证算法有可能碰撞出错误的口令，而且碰撞的概率还不小。
+为了进一步确认口令是否正确，我们还需要对GPU代码给出的口令做进一步验证。
+我直接使用<a href="https://github.com/zip-rs/zip2/">rust的zip库</a>来进行进一步验证。
+为此，我需要CPU在运行过程中就得知GPU代码的验证结果。
+开发正确的CPU-GPU同步机制十分困难，这里我取巧，直接沿用了CUDA代码中实现的<code>printf</code>函数。
+<code>printf</code>可以在GPU设备上调用，且其能够正确输出结果到<code>stdout</code>。
+为了使用GPU代码的输出结果，我创建了两个进程，并用匿名管道将它们连在一起。
+其中一个进程作为GPU进程，将自己的<code>stdout</code>重定向至管道的写端，并运行GPU代码；
+另一个进程则作为CPU进程，将自己的<code>stdin</code>重定向至管道的读端，这样，该进程就可以读到GPU代码的输出结果了。
+CPU进程接收到GPU进程发来的经过验证的口令后，会自动调用rust代码（我将rust代码编译为一个共享库，方便CPU代码调用），
+验证这些口令。无论验证成功与否，它都会将验证结果输出。这样，用户就能迅速地获知通过验证的口令了。</p>
+<h2 id="pei-zhi-wen-jian">配置文件</h2>
+<p>为了使用我的程序破解一个加密zip文件，用户首先需要决定口令的范围和位数。
+在实现中，这意味着更改<code>char* legal_chars</code>的内容。
+在最初的版本中，我使用命令行参数让用户输入口令的范围，但为了操作简洁，我现在使用toml作为配置文件，让用户能够快速配置程序的行为。
+为了解析toml配置文件，我使用了开源的<a href="https://github.com/ToruNiina/toml11">toml11</a>库作为解析器。
+在配置文件中，用户可以声明文件的类型（目前只支持zip文件）、加密算法（目前只支持AES算法）和待破解文件的路径。
+用户还可以声明口令中可能出现的合法字符，即口令中是否可能包括数字、小写/大写字母、特殊符号等，以及口令的最高位数。
+最终，我们就获得了一个几乎可用的加密zip文件破解工具。</p>
+<h2 id="jie-yu">结语</h2>
+<p>事实上，市面上已有需多使用各种手段的加密zip文件破解工具。
+他们能够提供更高的效率、更广泛的文件类型和加密算法支持、更简单的使用方法。
+我实现的加密zip文件破解工具的实际可用性其实并不高。
+我最早想要写这样一个程序，只是因为不想使用付费的破解服务/软件，而且似乎也没有找到什么合适的开源实现。
+同时，当时的我刚刚学会初步的多线程编程，同时对CUDA和GPU计算很感兴趣。
+因此，这个程序更像是一个练手作品。它是我第一个从头开始实现、具有一定性能的多线程、CUDA计算程序。
+如果你对这个程序感兴趣，欢迎在<a href="https://github.com/LipidL/ZipPasswordCracker">GitHub</a>上查看。</p>
+<div class="footnote-definition" id="password_order"><sup class="footnote-definition-label">1</sup>
+<p>这里指不影响程序正确性。尽早尝试到正确的口令能够让程序快速结束。但这在没有任何先验知识的情况下并不现实。</p>
+</div>
+<div class="footnote-definition" id="heterogeneous_computation"><sup class="footnote-definition-label">2</sup>
+<p>使用不同类型的指令集和系统架构的计算单元组成系统的计算方式——wikipedia</p>
+</div>
+<div class="footnote-definition" id="seperated_password"><sup class="footnote-definition-label">3</sup>
+<p>zip文件可对每个文件单独设置口令。</p>
+</div>
+<div class="footnote-definition" id="multithreads_efficiency"><sup class="footnote-definition-label">4</sup>
+<p>该CPU的12个线程存在于6个物理内核中。由于多线程的特性，在计算密集型任务(如本程序)中，超线程的性能提升远远不如线程数的提升。</p>
+</div>
+<div class="footnote-definition" id="salt_length"><sup class="footnote-definition-label">5</sup>
+<p>根据加密强度的不同，盐的长度可以为8，12或16位。</p>
+</div>
+<div class="footnote-definition" id="GPU_dynamic_memory"><sup class="footnote-definition-label">6</sup>
+<p>在GPU分配的显存可以在运行时决定，但显存的分配只能由CPU代码完成。</p>
+</div>
+</section>
+  <hr />
+  <!-- Post Taxonomies -->
+
+  <!-- Begin Page End inject -->
+  
+  <!-- End Page End inject -->
+</article>
+
+  </main>
+  <!-- Footer -->
+<footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+  © <time datetime="2025">2025</time> Lipid
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <span class="mr-6 lg:ml-6">
+      <a class="link" href="https://www.getzola.org/" target="_blank">Powered by Zola</a>
+    </span>
+    <a class="link" href="https://www.getzola.org/themes/linkita/" target="_blank">&#9998; Linkita</a>
+  </div>
+  <!-- Begin Footer inject -->
+  
+  <!-- End Footer inject -->
+</footer>
+
+  
+  <link rel="stylesheet" href="https://lipidl.github.io/katex/katex.min.css?h=0c8126645bb983a788b1" />
+  <script defer src="https://lipidl.github.io/katex/katex.min.js?h=76d534cf1167067008fc"></script>
+  <script defer src="https://lipidl.github.io/katex/contrib/auto-render.min.js?h=bb53eb953394531aae36"></script>
+  <script>document.addEventListener("DOMContentLoaded", window.zolaTheme.katex.init);</script>
+
+  <!-- Begin Body End inject -->
+  
+  <!-- End Body End inject -->
+</body>
+
+</html>
